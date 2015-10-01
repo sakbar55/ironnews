@@ -1,5 +1,11 @@
 require "sqlite3"
 require 'active_record'
+require 'sinatra'
+require 'sinatra/reloader' if development?
+require 'erb'
+
+
+
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 

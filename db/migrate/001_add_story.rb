@@ -12,3 +12,15 @@ class AddStory < ActiveRecord::Migration
     drop_table :stories
   end
 end
+
+
+if params[:page]
+  page_offset = per_page +
+
+
+
+time= time.now
+ago = article.created_at - time
+if article.created_at -time
+  ago = Time.now = article.created_at
+  if ago > _____ (one day's worth of seconds)
