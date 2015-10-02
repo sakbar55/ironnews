@@ -22,7 +22,15 @@
     </div>
     <div class="content">
       <div class="container">
-
+        <div class="row">
+          <div class="maincontent">
+            <% @stories.each do |story| %>
+            <ul>
+              <li><a href="<% story.link %>"><%= story.title %></a></li>
+            </ul>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </body>
