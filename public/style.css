@@ -1,0 +1,18 @@
+body {
+  background-color: #ff0066;
+}
+
+.nav_links a {
+  color: #ffffff;
+}
+
+.link {
+  background-color: #FFCC66;
+  padding: 3px;
+  color: #000000;
+}
+
+.email_link {
+  padding: 3px;
+  color: #000000;
+}

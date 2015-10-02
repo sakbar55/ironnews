@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Hacker News</title>
   </head>
   <body>
-    <div class="navbar navbar-default">
+    <div class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <ul class="list-inline">
-            <li><a href="#">New</a></li>
-            <li><a href="#">Comments</a></li>
-            <li><a href="#">Show</a></li>
-            <li><a href="#">Ask</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Submit</a></li>
+            <li class="nav_links"><a href="#">New</a></li>
+            <li class="nav_links"><a href="#">Comments</a></li>
+            <li class="nav_links"><a href="#">Show</a></li>
+            <li class="nav_links"><a href="#">Ask</a></li>
+            <li class="nav_links"><a href="#">Jobs</a></li>
+            <li class="nav_links"><a href="#">Submit</a></li>
           </ul>
         </div>
       </div>
@@ -24,9 +25,13 @@
       <div class="container">
         <div class="row">
           <div class="maincontent">
+            <div class="header">
+              <h1>Hacker News Feed</h1>
+            </div>
             <% @stories.each do |story| %>
             <ul>
-              <li><a href="<% story.link %>"><%= story.title %></a></li>
+              <li><a class="link" href="<% story.link %>"><%= story.title %></a></li>
+              <span>submitted by <a class="email_link" href="mailto:<%= story.author.email %>"><%= story.author.email %></a> on <%= story.created_at %></span>
             </ul>
             <% end %>
           </div>

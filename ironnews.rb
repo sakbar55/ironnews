@@ -11,7 +11,16 @@ ActiveRecord::Base.establish_connection(
   database: File.dirname(__FILE__) + "/ironnews.sqlite3"
 )
 
+class Author < ActiveRecord::Base
+  has_many :stories
+  validates :name, presence: true
+  validates :email, presence: true
+end
+
 class Story < ActiveRecord::Base
+  belongs_to :author
+  validates :link, presence: true
+  validates :title, presence: true
 end
 
 get '/' do
